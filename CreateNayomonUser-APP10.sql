@@ -15,6 +15,7 @@
 --  Date      Sign                History
 --  --------  ----------------    -----------------------------------------------------------
 --  20240513  Michael Glorioso    Created.
+--  20240726  Malindu Fernando    Added grant on V_$RMAN_BACKUP_JOB_DETAILS for RMAN monitoring
 -------------------------------------------------------------------------------
 
 SET serverout ON SIZE 1000000
@@ -258,6 +259,7 @@ Create_User___(username_, password_, 'IFSAPP_DATA', 'TEMP' , 'DEFAULT' );
    Run_Ddl('GRANT SELECT ON V_$RMAN_STATUS TO ' || username_ || ' WITH GRANT OPTION');
    Run_Ddl('GRANT SELECT ON v_$resource_limit TO ' || username_ || ' WITH GRANT OPTION');
    Run_Ddl('GRANT SELECT ON v_$sysstat TO ' || username_ || ' WITH GRANT OPTION');
+   Run_Ddl('GRANT SELECT ON V_$RMAN_BACKUP_JOB_DETAILS TO ' || username_ || ' WITH GRANT OPTION');
   
 
    -- Run_Ddl('GRANT SELECT ON V$SQLTEXT TO ' || username_ || ' WITH GRANT OPTION');
