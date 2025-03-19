@@ -130,7 +130,7 @@ Create_User___(username_, password_, 'IFSAPP_DATA', 'TEMP' , 'DEFAULT' );
    Run_Ddl('GRANT CREATE SESSION TO ' || username_ || ' WITH ADMIN OPTION');
    Run_Ddl('GRANT ALTER SESSION TO ' || username_ || ' WITH ADMIN OPTION');
    Run_Ddl('GRANT RESTRICTED SESSION TO ' || username_);
-   Run_Ddl('ALTER USER ' || username_ || ' GRANT CONNECT THROUGH IFSSYS');
+
    
    -- Oracle Dictionary views
    --
